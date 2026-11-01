@@ -16,8 +16,8 @@
 11. Print all
 12. Stop
 
-```mermaid
 ### FLOWCHART (MERMAID)
+```mermaid
 flowchart TD
     A[Start] --> B[Input venue, equipment, transport, catering, certificate, fee, sponsorship, n]
     B --> C[fixed = venue+equipment+transport]
