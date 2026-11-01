@@ -1,5 +1,4 @@
-
- PROBLEM STATEMENT
+PROBLEM STATEMENT
  Examination Result and Grace-Mark Validation: Process marks across multiple subjects, apply subject-wise pass criteria and a specified grace-mark policy, and generate final classifications without exceeding maximum marks. 
  
  ALGORITHM
@@ -14,7 +13,6 @@
 9. Stop
 
 ```mermaid
-### FLOWCHART (MERMAID CODE)
 flowchart TD
     A[Start] --> B[Input marks for all subjects]
     B --> C[Set passMark=35, graceLimit=5]
@@ -51,7 +49,7 @@ print("Final Marks:", final_marks)
 print("Total:", total)
 print("Percentage:", per)
 print("Result:", result)
-
+ 
  SAMPLE INPUT
 Enter marks of all subjects separated by space: 65 78 33 55 70
 
