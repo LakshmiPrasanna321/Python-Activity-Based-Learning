@@ -1,7 +1,7 @@
-PROBLEM STATEMENT
- Examination Result and Grace-Mark Validation: Process marks across multiple subjects, apply subject-wise pass criteria and a specified grace-mark policy, and generate final classifications without exceeding maximum marks. 
+## PROBLEM STATEMENT
+* Examination Result and Grace-Mark Validation: Process marks across multiple subjects, apply subject-wise pass criteria and a specified grace-mark policy, and generate final classifications without exceeding maximum marks. 
  
- ALGORITHM
+## ALGORITHM
 1. Start
 2. Input number of subjects, max marks (100) and pass marks (35)
 3. Input marks for each subject
@@ -11,7 +11,7 @@ PROBLEM STATEMENT
 7. If all subjects pass after grace, Result = PASS, else FAIL
 8. Calculate total and percentage and print classification
 9. Stop
-
+## FLOWCHART(MERMAID CODE)
 ```mermaid
 flowchart TD
     A[Start] --> B[Input marks for all subjects]
@@ -39,7 +39,7 @@ flowchart TD
     R --> S[Stop]
 ```
 
-Input
+## Input
 marks = list(map(int, input("Enter marks of all subjects separated by space: ").split()))
 
 total, per, result, final_marks = check_result(marks)
@@ -50,8 +50,8 @@ print("Total:", total)
 print("Percentage:", per)
 print("Result:", result)
  
- SAMPLE INPUT
+## SAMPLE INPUT
 Enter marks of all subjects separated by space: 65 78 33 55 70
 
-SAMPLE OUTPUT
+## SAMPLE OUTPUT
 Grace of 2 marks applied in Subject 3
