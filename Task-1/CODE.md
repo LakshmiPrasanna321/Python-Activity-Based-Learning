@@ -38,17 +38,6 @@ flowchart TD
     Q --> R[Print Result]
     R --> S[Stop]
 ```
-
-## Input
-marks = list(map(int, input("Enter marks of all subjects separated by space: ").split()))
-
-total, per, result, final_marks = check_result(marks)
-
-print("\n--- RESULT ---")
-print("Final Marks:", final_marks)
-print("Total:", total)
-print("Percentage:", per)
-print("Result:", result)
  
 ## SAMPLE INPUT
 Enter marks of all subjects separated by space: 65 78 33 55 70
