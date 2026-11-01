@@ -19,15 +19,15 @@
 ### FLOWCHART (MERMAID)
 ```mermaid
 flowchart TD
-    A[Start] --> B[Input venue, equipment, transport, catering, certificate, fee, sponsorship, n]
-    B --> C[fixed = venue+equipment+transport]
-    C --> D[per_person = catering+certificate]
-    D --> E[total_cost = fixed + per_person*n]
-    E --> F[total_income = sponsorship + fee*n]
-    F --> G[shortfall = total_cost - total_income]
-    G --> H[break_even = (fixed-sponsorship)/(fee-per_person)]
-    H --> I[Print total_cost, total_income, shortfall, break_even]
-    I --> J[Stop]
+    A["Start"] --> B["Input venue, equipment, transport, catering, certificate, fee, sponsorship, n"]
+    B --> C["fixed = venue+equipment+transport"]
+    C --> D["per_person = catering+certificate"]
+    D --> E["total_cost = fixed + per_person*n"]
+    E --> F["total_income = sponsorship + fee*n"]
+    F --> G["shortfall = total_cost - total_income"]
+    G --> H["break_even = (fixed-sponsorship)/(fee-per_person)"]
+    H --> I["Print total_cost, total_income, shortfall, break_even"]
+    I --> J["Stop"]
 ```
 
 ### SAMPLE INPUT
