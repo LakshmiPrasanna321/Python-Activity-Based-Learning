@@ -44,3 +44,7 @@ Enter marks of all subjects separated by space: 65 78 33 55 70
 
 ## SAMPLE OUTPUT
 Grace of 2 marks applied in Subject 3
+Final Marks: [65, 78, 35, 55, 70]
+Total: 303
+Percentage: 60.6
+Result: PASS WITH GRACE
