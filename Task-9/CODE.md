@@ -68,5 +68,3 @@ Shirt: Subtotal 2000.0, Tax 240.0, Total 2240.0
 Grand Total: 3290.0
 Discount: 164.5
 Final Payable: 3125.5
-
-Do you want *Case 8* also in same simple format?
