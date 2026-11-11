@@ -61,5 +61,3 @@ Total Cost: 399.0
 Best Plan: Plan B
 Best Cost: 399.0
 
-
-Do you want *Case 6* also in same simple format?
