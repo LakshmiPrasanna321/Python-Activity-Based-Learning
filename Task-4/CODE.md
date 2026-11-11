@@ -1,7 +1,8 @@
 
-*Problem Statement:* Evaluate applicants using aggregate marks, subject-wise minimum scores, attendance, and income criteria, rank eligible students, and resolve ties using predefined rules.
+### Problem Statement:
+*Evaluate applicants using aggregate marks, subject-wise minimum scores, attendance, and income criteria, rank eligible students, and resolve ties using predefined rules.
 
-*Algorithm:*
+### Algorithm:
 1. Start
 2. Read number of students and details: name, marks list, attendance, income
 3. For each student, calculate aggregate percentage
@@ -11,7 +12,7 @@
 7. Display ranked list with scholarship amount
 8. Stop
 
-*Flowchart:*
+### Flowchart:
 ```mermaid
 flowchart TD
     A[Start] --> B[Read student details]
@@ -25,7 +26,7 @@ flowchart TD
     H --> I[Stop]
 ```
 
-*Sample Input:*
+### Sample Input:
 Enter number of students: 2
 Enter name: Ravi
 Enter 3 subject marks separated by space: 85 80 90
@@ -35,7 +36,8 @@ Enter name: Priya
 Enter 3 subject marks separated by space: 60 55 70
 Enter attendance %: 80
 Enter family income: 250000
-*Sample Output:*
+
+### Sample Output:
 Ravi - Eligible
 Priya Not Eligible
 
