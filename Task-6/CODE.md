@@ -1,4 +1,3 @@
-
 ### Problem Statement:
  Employee Payroll and Deduction Analysis: Calculate gross salary from basic pay, allowances, overtime, and incentives; apply progressive deductions and generate a formatted salary statement. 
  
@@ -51,4 +50,3 @@ Tax Deduction: 2000.0
 Net Salary: 34400.0
 
 
-Do you want *Case 5* also in same simple format?
