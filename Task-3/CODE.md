@@ -1,52 +1,63 @@
+### Problem Statement:
+ Progressive Electricity Billing: Calculate household bills using multiple consumption slabs, fixed charges, surcharges, and rebates, then compare bills across several months and identify unusual increases.
 
-### PROBLEM STATEMENT
-*Examination Result and Grace-Mark Validation:* Process marks across multiple subjects, apply subject-wise pass criteria and a specified grace-mark policy, and generate final classifications without exceeding maximum marks.
-
-### ALGORITHM
+### Algorithm:
 1. Start
-2. Input number of subjects, max marks (100) and pass marks (35)
-3. Input marks for each subject
-4. For each subject, check if marks >= 35, else calculate deficit = 35 - marks
-5. If deficit <= 5 and student fails in only 1 subject, add grace marks
-6. Check that grace marks do not make total > maximum marks
-7. If all subjects pass after grace, Result = PASS, else FAIL
-8. Calculate total and percentage and print classification
-9. Stop
+2. Read number of months
+3. For each month, read units consumed
+4. Calculate slab-wise charge:
+   - If units <= 100, charge = units _ 3
+   - Else if units <= 200, charge = 100_3 + (units-100)_5
+   - Else if units <= 300, charge = 100_3 + 100_5 + (units-200)_7
+   - Else charge = 100_3 + 100_5 + 100_7 + (units-300)_9
+5. Add fixed charge Rs. 100 to get total bill
+6. If total bill > 1000, add 10% surcharge
+7. If units < 100, subtract 5% rebate
+8. Store the bill for this month
+9. Compare with previous month bill. If increase > 30%, flag as Unusual Increase
+10. Display month, units, bill and status
+11. Stop
 
-### FLOWCHART (MERMAID CODE)
+### Flowchart:
 ```mermaid
 flowchart TD
-    A[Start] --> B[Input marks for all subjects]
-    B --> C[Set passMark=35, graceLimit=5]
-    C --> D{Check each subject}
-    D -->|marks >= 35| E[Subject Pass]
-    D -->|marks < 35| F[Calculate deficit]
-    F --> G{Fail in 1 subject and deficit <=5?}
-    G -->|Yes| H[Add Grace Marks]
-    G -->|No| I[No Grace - Fail]
-    H --> J{Marks > Max?}
-    J -->|Yes| K[Set to Max Marks]
-    J -->|No| L[Keep Grace Marks]
-    E --> M[All Subjects Checked?]
-    L --> M
-    I --> M
-    K --> M
-    M -->|No| D
-    M -->|Yes| N{All Pass?}
-    N -->|Yes| O[Result = PASS]
-    N -->|No| P[Result = FAIL]
-    O --> Q[Calculate Total & Percentage]
-    P --> Q
-    Q --> R[Print Result]
-    R --> S[Stop]
+    A[Start] --> B[Read number of months]
+    B --> C[Read units for month]
+    C --> D[Calculate slab-wise charge]
+    D --> E[Add Fixed Charge Rs.100]
+    E --> F{Bill > 1000?}
+    F -- Yes --> G[Add 10% Surcharge]
+    F -- No --> H{Units < 100?}
+    G --> H
+    H -- Yes --> I[Subtract 5% Rebate]
+    H -- No --> J[Final Bill Ready]
+    I --> J
+    J --> K{First Month?}
+    K -- Yes --> L[No Comparison]
+    K -- No --> M{Bill > Prev Bill * 1.30?}
+    M -- Yes --> N[Flag Unusual Increase]
+    M -- No --> O[Normal]
+    L --> P[Display Bill]
+    N --> P
+    O --> P
+    P --> Q{More Months?}
+    Q -- Yes --> C
+    Q -- No --> R[Stop]
 ```
-### SAMPLE INPUT
-Enter marks of all subjects separated by space: 65 78 33 55 70
-### SAMPLE OUTPUT
-Grace of 2 marks applied in Subject 3
+### Sample Input:
+Enter number of months: 3
+Enter units for Month 1: 90
+Enter units for Month 2: 150
+Enter units for Month 3: 280
+### Sample Output:*
+Month | Units | Bill | Status
+Month 1 | Units: 90 | Bill: Rs.351.50 | First Month
+  -> Rebate Applied: Rs.18.50
+Month 2 | Units: 150 | Bill: Rs.650.00 | Unusual Increase!
+Month 3 | Units: 280 | Bill: Rs.1460.00 | Unusual Increase!
+  -> Surcharge Applied: Rs.132.73
+Total Bill for 3 months: Rs.2461.50
+Average Monthly Bill: Rs.820.50
+---
 
---- RESULT ---
-Final Marks: [65, 78, 35, 55, 70]
-Total: 303
-Percentage: 60.6
-Result: PASS WITH GRACE
+Do you want me to give *Case 3* also like this in full detail now?
