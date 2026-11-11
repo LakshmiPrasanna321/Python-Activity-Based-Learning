@@ -49,6 +49,7 @@ Enter number of months: 3
 Enter units for Month 1: 90
 Enter units for Month 2: 150
 Enter units for Month 3: 280
+
 ### Sample Output:*
 Month | Units | Bill | Status
 Month 1 | Units: 90 | Bill: Rs.351.50 | First Month
@@ -58,6 +59,4 @@ Month 3 | Units: 280 | Bill: Rs.1460.00 | Unusual Increase!
   -> Surcharge Applied: Rs.132.73
 Total Bill for 3 months: Rs.2461.50
 Average Monthly Bill: Rs.820.50
----
 
-Do you want me to give *Case 3* also like this in full detail now?
